@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles/template.css">
+    <link rel="stylesheet" type="text/css" href="styles/about.css">
+    <meta charset="utf-8">
+    <title>Najam R. Syed Portfolio</title>
+  </head>
+  <body class="dark">
+    <div id="main">
+
+      <nav>
+        <div>
+          <div id="name"></div>
+          <ul id="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <!-- <li><a href="experience.html">Experience</a></li> -->
+            <li><a href="https://nrsyed.com">Blog</a></li>
+          </ul>
+
+          <ul id="theme-selectors">
+            <li><span id="dark" class="theme-selector selected">Dark</span></li>
+            <li><span id="light" class="theme-selector">Light</span></li>
+            <li><span id="blue" class="theme-selector">Blue</span></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="content">
+        <div id="nav-spacer"></div>
+        <h1>Najam R. Syed</h1>
+        <h3>Robotics software engineer</h3>
+        <p>
+        I'm a robotics engineer with experience in software, mechatronics, and
+        the design of electromechanical systems, with my interests tending
+        toward computer vision, machine learning, robotic perception/control,
+        and autonomous systems. I'm also a perpetual proponent of employing
+        applied math, algorithms, and numerical methods to solve challenging
+        technical problems.
+        </p>
+        <p>
+        I earned an M.S. in Mechanical Engineering from Purdue and a B.S. in
+        Molecular &amp; Cell Biology from UConn.
+        </p>
+        <p>
+        These days, my go-to toolkit comprises <code>Python</code> (including
+        <code>scipy</code>, <code>numpy</code>, <code>scikit-learn</code>, 
+        <code>scikit-image</code>, and <code>matplotlib</code>),
+        <code>C++</code> (primarily <code>C++11</code>), <code>OpenCV</code>,
+        and <code>JavaScript</code> (with a sprinkling of <code>HTML</code> and
+        <code>CSS</code>), but I've also worked with <code>C</code>,
+        <code>Matlab</code>, <code>LabVIEW</code>, and <code>Simulink</code>.
+        On the product development front, I've spent more than my share of time
+        creating CAD models in <code>SolidWorks</code> and
+        <code>Inventor</code> or machining and building prototypes in the shop.
+        </p>
+        <p>
+        I'm an avid Linux convert, running Debian and Ubuntu on my personal
+        computers. My editor of choice is <code>Vim</code>, from which
+        you might correctly surmise that, for the majority of tasks, I feel
+        most at home on the <code>bash</code> command line.
+        </p>
+        <p>
+        Find me online in the usual ways via the links below, and check out
+        my projects and other experience using the links in the navbar above.
+        </p>
+
+        <div class="button-container">
+          <a href="https://github.com/nrsyed"
+             class="button github-button"></a>
+          <a href="https://www.linkedin.com/in/najam-syed/"
+             class="button linkedin-button"></a>
+          <a href="rfnqyt?sfofr3w3x~jiElrfnq3htr" class="button gmail-button"></a>
+          <a href="https://www.youtube.com/channel/UCiCUUVapPoHckB1xdZFTHiA"
+             class="button youtube-button"></a>
+          <a href="https://nrsyed.com" class="button wordpress-button"></a>
+        </div>
+        <div id="nav-spacer"></div>
+        <div id="footer">&copy; 2018 Najam R. Syed</div>
+      </div>
+
+    </div>
+  </body>
+
+  <script src="scripts/template.js"></script>
+  <script>
+    var gmailBtn = document.getElementsByClassName("gmail-button")[0];
+    var scrambled = gmailBtn.getAttribute("href");
+    gmailBtn["href"] = scrambled.split("").map(function(c) {
+      return String.fromCharCode(c.charCodeAt(0) - 5) }).join("");
+  </script>
+</html>
