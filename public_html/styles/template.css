@@ -1,0 +1,272 @@
+:root {
+  /* Theme color definitions. */
+
+  --card-bg-dark: #2a252c;
+  --card-text-dark: #dddddd;
+  --content-bg-dark: #2d2d2d;
+  --link-color-dark: #5299e0;
+  --main-bg-dark: rgb(8,8,8);
+  --modal-body-bg-dark: #252120;
+  --modal-header-bg-dark: #a92f41;
+  --modal-header-text-dark: #e5dfc5;
+  --modal-text-dark: #dddddd;
+  --nav-bg-dark: #2a252c;
+  --nav-btn-border-dark: white;
+  --text-color-dark: #dddddd;
+  
+  --card-bg-light: #fdfdfd;
+  --card-text-light: #373737;
+  --content-bg-light: #edece8;
+  --link-color-light: #2277c1;
+  --main-bg-light: #ffffff;
+  --modal-body-bg-light: #eaeaea;
+  --modal-header-bg-light: #acc7dc;
+  --modal-header-text-light: #343434;
+  --modal-text-light: #373737;
+  --nav-bg-light: #c9af98;
+  --nav-btn-border-light: #f8f4f3;
+  --text-color-light: #373737;
+
+  --card-bg-blue: #fefefe;
+  --card-text-blue: #283655;
+  --content-bg-blue: #2196f3;
+  --link-color-blue: #c05805;
+  --main-bg-blue: #f4eade;
+  --modal-body-bg-blue: #fefefe;
+  --modal-header-bg-blue: #fb6542;
+  --modal-header-text-blue: #2d4262;
+  --modal-text-blue: #373737;
+  --nav-bg-blue: #283655;
+  --nav-btn-border-blue: white;
+  --text-color-blue: #eeeeee;
+
+  --nav-btn-hover: rgba(255, 255, 255, 0.15);
+  --nav-height: 65px;
+}
+
+html {
+  font-size: 10px;
+  font-family: Georgia, serif;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+h1 { font-size: 5rem; font-weight: normal;}
+h2 { font-size: 4rem; font-weight: normal;}
+h3 { font-size: 3.2rem; font-weight: normal;}
+h4 { font-size: 2.2rem; margin: 0;}
+h5 { font-size: 1.9rem; margin: 0;}
+h6 { font-size: 1.3rem; margin: 0;}
+
+p {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin: 1.4rem 0.5rem;
+}
+
+code {
+  font-family: Courier New;
+  font-size 2.2rem;
+  font-weight: bold;
+}
+
+/* Main (background). */
+#main {
+  height: 100%;
+  width: 100%;
+  transition-duration: 0.2s;
+}
+
+.blue #main {
+  --card-bg: var(--card-bg-blue);
+  --card-text: var(--card-text-blue);
+  --content-bg: var(--content-bg-blue);
+  --link-color: var(--link-color-blue);
+  --nav-bg: var(--nav-bg-blue);
+  --nav-btn-border: var(--nav-btn-border-blue);
+  --text-color: var(--text-color-blue);
+
+  color: var(--text-color);
+  background-color: var(--main-bg-blue);
+
+  --modal-body-bg: var(--modal-body-bg-blue);
+  --modal-header-bg: var(--modal-header-bg-blue);
+  --modal-header-text: var(--modal-header-text-blue);
+  --modal-text: var(--modal-text-blue);
+}
+
+.dark #main {
+  --card-bg: var(--card-bg-dark);
+  --card-text: var(--card-text-dark);
+  --content-bg: var(--content-bg-dark);
+  --link-color: var(--link-color-dark);
+  --modal-header-bg: var(--modal-header-bg-dark);
+  --nav-bg: var(--nav-bg-dark);
+  --nav-btn-border: var(--nav-btn-border-dark);
+  --text-color: var(--text-color-dark);
+
+  color: var(--text-color);
+  background-color: var(--main-bg-dark);
+
+  --modal-body-bg: var(--modal-body-bg-dark);
+  --modal-header-bg: var(--modal-header-bg-dark);
+  --modal-header-text: var(--modal-header-text-dark);
+  --modal-text: var(--modal-text-dark);
+}
+
+.light #main {
+  --card-bg: var(--card-bg-light);
+  --card-text: var(--card-text-light);
+  --content-bg: var(--content-bg-light);
+  --link-color: var(--link-color-light);
+  --modal-header-bg: var(--modal-header-bg-light);
+  --nav-bg: var(--nav-bg-light);
+  --nav-btn-border: var(--nav-btn-border-light);
+  --text-color: var(--text-color-light);
+
+  color: var(--text-color);
+  background-color: var(--main-bg-light);
+
+  --modal-body-bg: var(--modal-body-bg-light);
+  --modal-header-bg: var(--modal-header-bg-light);
+  --modal-header-text: var(--modal-header-text-light);
+  --modal-text: var(--modal-text-light);
+}
+
+#main a {
+  color: var(--link-color);
+}
+
+/* TODO: media query for width. */
+#content {
+  background-color: var(--content-bg);
+  margin: auto;
+  max-width: 1000px;
+  min-height: 100%;
+  padding: 0 3%;
+  width: 80%;
+}
+
+#nav-spacer {
+  margin: 0;
+  height: var(--nav-height);
+}
+
+/* Navbar. */
+nav {
+  background-color: var(--nav-bg);
+  height: var(--nav-height);
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+/* TODO: media query. */
+nav div {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  height: 100%;
+}
+
+#name {
+  flex: 0.6;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+#nav-links {
+  flex-grow: 0.7;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-links li {
+  display: inline-block;
+}
+
+#nav-links li a {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+
+  --bottom-border-width: 6px;
+  height: calc(var(--nav-height) - var(--bottom-border-width) - 2px);
+  padding: 2px 10px 0 10px;
+
+  border-bottom: var(--bottom-border-width) solid transparent;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+#nav-links li a:hover {
+  background-color: var(--nav-btn-hover);
+  border-color: var(--nav-btn-border);
+}
+
+#theme-selectors {
+  display: flex;
+  flex: 0.2;
+  align-items: center; 
+  padding: 0;
+  margin: 0;
+}
+
+#theme-selectors li {
+  display: inline-block;
+  margin: 0 6px 0 6px;
+}
+
+#theme-selectors li span {
+  border-radius: 25%;
+  font-size: 1.6rem;
+  margin: 1px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#blue {
+  background-color: rgb(31, 150, 191);
+  color: rgb(230, 230, 230);
+}
+
+#blue.selected {
+  background-color: rgb(60, 180, 255);
+  color: white;
+}
+
+#dark {
+  background-color: rgb(50, 50, 50);
+  color: rgb(230, 230, 230);
+}
+
+#dark.selected {
+  background-color: black;
+  color: white;
+}
+
+#light {
+  background-color: rgb(220, 220, 220);
+  color: rgb(60, 60, 60);
+}
+
+#light.selected {
+  background-color: white;
+  color: black;
+}
+
+#footer {
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 20px 0 10px 0;
+  text-align: center;
+}
