@@ -1,0 +1,75 @@
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 60px 0;
+  text-align: center;
+}
+
+.button {
+  position: relative;
+  background-size: contain;
+  height: 66px;
+  width: 66px;
+}
+
+.button:hover {
+  animation-name: button-hover;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes button-hover {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.2); }
+}
+
+/*
+Logos obtained from https://github.com/simple-icons/simple-icons,
+modified from original SVG format, under Creative Commons license.
+*/
+
+.blue .github-button,
+.dark .github-button {
+  background-image: url("../images/github_light.png");
+}
+
+.light .github-button {
+  background-image: url("../images/github_dark.png");
+}
+
+.blue .gmail-button,
+.dark .gmail-button {
+  background-image: url("../images/gmail_light.png");
+}
+
+.light .gmail-button {
+  background-image: url("../images/gmail_dark.png");
+}
+
+.blue .linkedin-button,
+.dark .linkedin-button {
+  background-image: url("../images/linkedin_light.png");
+}
+
+.light .linkedin-button {
+  background-image: url("../images/linkedin_dark.png");
+}
+
+.blue .youtube-button,
+.dark .youtube-button {
+  background-image: url("../images/youtube_light.png");
+}
+
+.light .youtube-button {
+  background-image: url("../images/youtube_dark.png");
+}
+
+.blue .wordpress-button,
+.dark .wordpress-button {
+  background-image: url("../images/wordpress_light.png");
+}
+
+.light .wordpress-button {
+  background-image: url("../images/wordpress_dark.png");
+}
