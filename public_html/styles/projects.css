@@ -1,0 +1,150 @@
+/* Project cards displayed in flex rows. */
+
+.project-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 30px 0 30px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border: 1px solid #000;
+  border-radius: 2%;
+  color: var(--card-text);
+  cursor: pointer;
+  height: 250px;
+  max-width: 300px;
+  padding: 10px 10px 0;
+  width: 28%;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 2px 3px rgb(20,20,20, 0.4);
+  z-index: 100;
+}
+
+.project-card img {
+  border-radius: 1%;
+  max-width: 100%;
+  height: 65%;
+}
+
+.project-card hr {
+  margin-top: 8px;
+  border-color: white;
+}
+
+.project-card h4 {
+  margin-top: 10px;
+  padding: 0;
+}
+
+.project-card h5 {
+  margin-top: 8px;
+  padding: 0;
+}
+
+/* Modal window. */
+.modal {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  padding-top: var(--nav-height);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 300;
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--modal-body-bg);
+  border-radius: 5px;
+
+  /* Counterintuitively, vertical margins defined by a percentage vary
+  based on the width of the container, NOT the height. Hence, below, the
+  vertical margins are defined by the navbar height rather than percentage.*/
+  margin: 0 auto calc(2 * var(--nav-height));
+  padding: 0;
+  border: 1px solid #888;
+  width: 65%;
+  max-width: 750px;
+
+  animation-name: animate-modal;
+  animation-duration: 0.5s;
+}
+
+@keyframes animate-modal {
+  from { right: -200px; opacity: 0; }
+  to { right: 0; opacity: 1; }
+}
+
+.modal-header {
+  background-color: var(--modal-header-bg);
+  border-radius: 4px;
+  text-align: center;
+  padding: 0 auto;
+  width: 100%;
+}
+
+.modal-header h3 {
+  color: var(--modal-header-text);
+  margin: 0;
+  padding: 14px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  color: var(--modal-text);
+  width: 100%;
+}
+
+.modal-body ol {
+  font-size: 1.9rem;
+}
+
+.modal-body p {
+  padding: 10px;
+  font-size: 1.9rem;
+}
+
+.modal-body img {
+  border-radius: 2px;
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+.caption {
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+  padding: 0 20px;
+}
+
+iframe {
+  border-radius: 1%;
+  max-width: 90%;
+}
