@@ -148,3 +148,10 @@ iframe {
   border-radius: 1%;
   max-width: 90%;
 }
+
+/* Styles for individual modals and elements. */
+#gameoflife-modal img {
+  display: inline;
+  margin: 8px 3%;
+  width: 35%;
+}
